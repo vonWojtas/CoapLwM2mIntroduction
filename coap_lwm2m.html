@@ -1,0 +1,875 @@
+<!DOCTYPE html><html lang="de-DE"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{-webkit-tap-highlight-color:transparent;-webkit-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{view-transition-name:__bespoke_marp_transition_osc__;background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:rgba(0,0,0,.65);border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{word-wrap:break-word;box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;scrollbar-color:hsla(0,0%,93%,.5) transparent;scrollbar-width:thin;white-space:pre-wrap;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,93%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|IBM+Plex+Sans:400,700");div#\:\$p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#\:\$p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#\:\$p>svg>foreignObject>section :is(h1,marp-h1){font-size:2em;margin:0.67em 0}div#\:\$p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p>svg>foreignObject>section{page-break-before:always;break-before:page}div#\:\$p>svg>foreignObject>section,div#\:\$p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#\:\$p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p>svg>foreignObject>:where(section){container-type:size}div#\:\$p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp Dracula theme.
+ * @theme dracula
+ * @author Daniel Nicolas Gisolfi
+ *
+ * @auto-scaling true
+ * @size 4:3 960px 720px
+ * @size 16:9 1280px 720px
+ */div#\:\$p>svg>foreignObject>:where(section):not([root]){--dracula-background:#282a36;--dracula-current-line:#44475a;--dracula-foreground:#f8f8f2;--dracula-comment:#6272a4;--dracula-cyan:#8be9fd;--dracula-green:#50fa7b;--dracula-orange:#ffb86c;--dracula-pink:#ff79c6;--dracula-purple:#bd93f9;--dracula-red:#ff5555;--dracula-yellow:#f1fa8c}div#\:\$p>svg>foreignObject>section .hljs{display:block;overflow-x:auto;padding:0.5em;background:var(--dracula-background)}
+
+/* Dracula Foreground */div#\:\$p>svg>foreignObject>section .hljs,div#\:\$p>svg>foreignObject>section .hljs-subst,div#\:\$p>svg>foreignObject>section .hljs-template-variable,div#\:\$p>svg>foreignObject>section .hljs-typing,div#\:\$p>svg>foreignObject>section .hljs-variable{color:var(--dracula-foreground)}
+
+/* Dracula Comment */div#\:\$p>svg>foreignObject>section .hljs-comment,div#\:\$p>svg>foreignObject>section .hljs-deletion,div#\:\$p>svg>foreignObject>section .hljs-quote{color:var(--dracula-comment)}
+
+/* Dracula Cyan */div#\:\$p>svg>foreignObject>section .hljs-built_in,div#\:\$p>svg>foreignObject>section .hljs-class,div#\:\$p>svg>foreignObject>section .hljs-link,div#\:\$p>svg>foreignObject>section .hljs-meta .hljs-doctag,div#\:\$p>svg>foreignObject>section .hljs-section,div#\:\$p>svg>foreignObject>section .hljs-selector-tag{color:var(--dracula-cyan)}
+
+
+/* Dracula Green */div#\:\$p>svg>foreignObject>section .hljs-title{color:var(--dracula-green)}
+
+/* Dracula Orange */div#\:\$p>svg>foreignObject>section .hljs-params{color:var(--dracula-orange)}
+
+/* Dracula Pink */div#\:\$p>svg>foreignObject>section .hljs-keyword{color:var(--dracula-pink)}
+
+/* Dracula Purple */div#\:\$p>svg>foreignObject>section .hljs-literal,div#\:\$p>svg>foreignObject>section .hljs-number{color:var(--dracula-purple)}
+
+/* Dracula Red */div#\:\$p>svg>foreignObject>section .hljs-regexp{color:var(--dracula-red)}
+
+/* Dracula Yellow */div#\:\$p>svg>foreignObject>section .hljs-addition,div#\:\$p>svg>foreignObject>section .hljs-attr,div#\:\$p>svg>foreignObject>section .hljs-bullet,div#\:\$p>svg>foreignObject>section .hljs-name,div#\:\$p>svg>foreignObject>section .hljs-string,div#\:\$p>svg>foreignObject>section .hljs-symbol,div#\:\$p>svg>foreignObject>section .hljs-template-tag,div#\:\$p>svg>foreignObject>section .hljs-type{color:var(--dracula-yellow)}div#\:\$p>svg>foreignObject>section .hljs-doctag,div#\:\$p>svg>foreignObject>section .hljs-keyword,div#\:\$p>svg>foreignObject>section .hljs-literal,div#\:\$p>svg>foreignObject>section .hljs-name,div#\:\$p>svg>foreignObject>section .hljs-section,div#\:\$p>svg>foreignObject>section .hljs-selector-tag,div#\:\$p>svg>foreignObject>section .hljs-strong,div#\:\$p>svg>foreignObject>section .hljs-title,div#\:\$p>svg>foreignObject>section .hljs-type{font-weight:bold}div#\:\$p>svg>foreignObject>section .hljs-emphasis,div#\:\$p>svg>foreignObject>section .hljs-params{font-style:italic}div#\:\$p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:580px}div#\:\$p>svg>foreignObject>section :is(h1,marp-h1),div#\:\$p>svg>foreignObject>section :is(h2,marp-h2),div#\:\$p>svg>foreignObject>section :is(h3,marp-h3),div#\:\$p>svg>foreignObject>section :is(h4,marp-h4),div#\:\$p>svg>foreignObject>section :is(h5,marp-h5),div#\:\$p>svg>foreignObject>section :is(h6,marp-h6){margin:0.5em 0 0 0;color:var(--dracula-pink)}div#\:\$p>svg>foreignObject>section :is(h1,marp-h1) strong,div#\:\$p>svg>foreignObject>section :is(h2,marp-h2) strong,div#\:\$p>svg>foreignObject>section :is(h3,marp-h3) strong,div#\:\$p>svg>foreignObject>section :is(h4,marp-h4) strong,div#\:\$p>svg>foreignObject>section :is(h5,marp-h5) strong,div#\:\$p>svg>foreignObject>section :is(h6,marp-h6) strong{font-weight:inherit}div#\:\$p>svg>foreignObject>section :is(h1,marp-h1){font-size:1.5em}div#\:\$p>svg>foreignObject>section :is(h2,marp-h2){font-size:1.2em}div#\:\$p>svg>foreignObject>section :is(h3,marp-h3){font-size:1.3em}div#\:\$p>svg>foreignObject>section :is(h4,marp-h4){font-size:1.1em}div#\:\$p>svg>foreignObject>section :is(h5,marp-h5){font-size:1em}div#\:\$p>svg>foreignObject>section :is(h6,marp-h6){font-size:0.9em}div#\:\$p>svg>foreignObject>section blockquote,div#\:\$p>svg>foreignObject>section p{margin:1em 0 0 0}div#\:\$p>svg>foreignObject>section ol>li,div#\:\$p>svg>foreignObject>section ul>li{margin:0.1em 0 0 0;color:var(--dracula-cyan)}div#\:\$p>svg>foreignObject>section ol>li>p,div#\:\$p>svg>foreignObject>section ul>li>p{margin:0.4em 0 0 0}div#\:\$p>svg>foreignObject>section code{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:0.6em;letter-spacing:0;margin:-0.1em 0.15em;padding:0.1em 0.1em;vertical-align:baseline;color:var(--dracula-green)}div#\:\$p>svg>foreignObject>section :is(pre,marp-pre){display:block;margin:1em 0 0 0;min-height:1em;overflow:visible}div#\:\$p>svg>foreignObject>section :is(pre,marp-pre) code{box-sizing:border-box;margin:0;min-width:100%;padding:0.5em;font-size:0.7em}div#\:\$p>svg>foreignObject>section :is(pre,marp-pre) code svg[data-marp-fitting=svg]{max-height:calc(580px - 1em)}div#\:\$p>svg>foreignObject>section blockquote{margin:1em 0 0 0;padding:0 1em;position:relative;color:var(--dracula-orange)}div#\:\$p>svg>foreignObject>section blockquote:after,div#\:\$p>svg>foreignObject>section blockquote:before{content:"“";display:block;font-family:"Times New Roman",serif;font-weight:bold;position:absolute;color:var(--dracula-green)}div#\:\$p>svg>foreignObject>section blockquote:before{top:0;left:0}div#\:\$p>svg>foreignObject>section blockquote:after{right:0;bottom:0;transform:rotate(180deg)}div#\:\$p>svg>foreignObject>section blockquote>:first-child{margin-top:0}div#\:\$p>svg>foreignObject>section mark{background:transparent}div#\:\$p>svg>foreignObject>section table{font-size:0.5em;border-spacing:0;border-collapse:collapse;margin:0.2em 0 0 0}div#\:\$p>svg>foreignObject>section table td,div#\:\$p>svg>foreignObject>section table th{padding:0.2em 0.4em;border-width:1px;border-style:solid}div#\:\$p>svg>foreignObject>section{font-size:33px;font-family:"IBM Plex Sans";line-height:1.35;letter-spacing:1.25px;padding:70px;color:var(--dracula-foreground);background-color:var(--dracula-background)}div#\:\$p>svg>foreignObject>section{--marpit-root-font-size:33px}div#\:\$p>svg>foreignObject>section>:first-child,div#\:\$p>svg>foreignObject>section>header:first-child+*{margin-top:0}div#\:\$p>svg>foreignObject>section a,div#\:\$p>svg>foreignObject>section mark{color:var(--dracula-red)}div#\:\$p>svg>foreignObject>section code{background:var(--dracula-current-line);color:var(--dracula-current-green)}div#\:\$p>svg>foreignObject>section :is(h1,marp-h1) strong,div#\:\$p>svg>foreignObject>section :is(h2,marp-h2) strong,div#\:\$p>svg>foreignObject>section :is(h3,marp-h3) strong,div#\:\$p>svg>foreignObject>section :is(h4,marp-h4) strong,div#\:\$p>svg>foreignObject>section :is(h5,marp-h5) strong,div#\:\$p>svg>foreignObject>section :is(h6,marp-h6) strong{color:var(--dracula-current-line)}div#\:\$p>svg>foreignObject>section :is(pre,marp-pre)>code{background:var(--dracula-current-line)}div#\:\$p>svg>foreignObject>section blockquote:after,div#\:\$p>svg>foreignObject>section blockquote:before,div#\:\$p>svg>foreignObject>section footer,div#\:\$p>svg>foreignObject>section header,div#\:\$p>svg>foreignObject>section section:after{color:var(--dracula-comment)}div#\:\$p>svg>foreignObject>section table td,div#\:\$p>svg>foreignObject>section table th{border-color:var(--dracula-current-line)}div#\:\$p>svg>foreignObject>section table thead th{background:var(--dracula-current-line);color:var(--dracula-yellow)}div#\:\$p>svg>foreignObject>section table tbody>tr:nth-child(2n) td,div#\:\$p>svg>foreignObject>section table tbody>tr:nth-child(2n) th{background:var(--dracula-current-line)}div#\:\$p>svg>foreignObject>section footer,div#\:\$p>svg>foreignObject>section header,div#\:\$p>svg>foreignObject>section:after{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute;color:var(--dracula-comment)}div#\:\$p>svg>foreignObject>section:after{--marpit-root-font-size:66%}div#\:\$p>svg>foreignObject>section header{left:0;right:0;top:0}div#\:\$p>svg>foreignObject>section footer{left:0;right:0;bottom:0}div#\:\$p>svg>foreignObject>section:after{right:0;bottom:0;font-size:80%}div#\:\$p>svg>foreignObject>section:after{--marpit-root-font-size:80%}
+
+/* @theme hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m */div#\:\$p>svg>foreignObject>section blockquote{margin:0.5em 0 0 0}div#\:\$p>svg>foreignObject>section[data-marpit-scope-mDAXZ273] :is(pre,marp-pre){font-size:0.8em}div#\:\$p>svg>foreignObject>section[data-marpit-scope-AAopLG3Y] p{font-size:0.6em}div#\:\$p>svg>foreignObject>section[data-marpit-scope-oKJ0lpjp] :is(pre,marp-pre){font-size:1em}div#\:\$p>svg>foreignObject>section[data-marpit-scope-oKJ0lpjp] p{font-size:0.5em}div#\:\$p>svg>foreignObject>section[data-marpit-scope-2te0PBJq] :is(pre,marp-pre){font-size:0.7em}div#\:\$p>svg>foreignObject>section[data-marpit-scope-fxqBG4QM] :is(pre,marp-pre){font-size:0.7em}div#\:\$p>svg>foreignObject>section[data-marpit-scope-sZlvyiHB] :is(pre,marp-pre){font-size:0.7em}div#\:\$p>svg>foreignObject>section[data-marpit-scope-3oZVjlH6] :is(pre,marp-pre){font-size:0.65em}div#\:\$p>svg>foreignObject>section[data-marpit-scope-dE6l8tSd] p{font-size:0.75em}div#\:\$p>svg>foreignObject>section[data-marpit-scope-gm6Xde85] :is(pre,marp-pre){font-size:0.75em}div#\:\$p>svg>foreignObject>section[data-marpit-scope-g0Q2DwmJ] :is(pre,marp-pre){font-size:0.75em}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure>figcaption{position:absolute;border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content],div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#\:\$p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./intro.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="1" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./goal.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="2" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1 id="our-goal-for-today">Our goal for today</h1>
+<p>Answer questions like:</p>
+<ul>
+<li>What is coap?</li>
+<li>How do observations work?</li>
+<li>What is a piggybacked message?</li>
+<li>Blockwise transfer in action</li>
+<li>see wireshark <img class="emoji" draggable="false" alt="🦈" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f988.svg" data-marp-twemoji=""/></li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="agenda">Agenda</h1>
+<ol>
+<li>CoAP overview</li>
+<li>CoAP messaging model</li>
+<li>CoAP Observations</li>
+<li>CoAP Blockwise transfers <img class="emoji" draggable="false" alt="🦈" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f988.svg" data-marp-twemoji=""/></li>
+<li>LwM2m overview</li>
+<li>LwM2m operations</li>
+<li>LwM2m operations in action</li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-marpit-scope-mDAXZ273="" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="what-is-coap">What is <code>CoAP</code>?</h1>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc7252">CoAP RFC 7252</a></p>
+<blockquote>
+<p>CoAP, or Constrained Application Protocol, is a specialized web transfer protocol designed for resource-constrained devices and networks in the context of the Internet of Things (IoT).</p>
+</blockquote>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>+----------------------+
+|      Application     |
++----------------------+
++----------------------+  \
+|  Requests/Responses  |  |
+|----------------------|  | CoAP
+|       Messages       |  |
++----------------------+  /
++----------------------+
+|          UDP         |
++----------------------+
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="coap-goals">CoAP Goals</h1>
+<ul>
+<li>Simple &amp; easy to understand</li>
+<li>HTTP convertable</li>
+<li>Constrained devices oriented</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./deployment.jpg&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="6" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="content">
+<h1 id="coap-deployment">CoAP Deployment</h1>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<ul>
+<li>A full redesign of HTTP with new features, not just a compressed / ‘dumped down’ version</li>
+<li>Binary protocol for different content types</li>
+<li>Runs on top of UDP (as well as TCP, SMS, ...)</li>
+<li>Native support for push notifications (with best effort semantics) in addition to traditional request / response</li>
+<li>Other features: discovery, multicast, HTTP mapping, DTLS security binding</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="similarities-to-http">Similarities to HTTP</h2>
+<ul>
+<li>Requests and responses, mirroring the structure of HTTP</li>
+<li>Requests include methods such as GET, POST, PUT, and DELETE defining the action to be performed on a resource</li>
+<li>Responses include status codes</li>
+<li>URI structure: <code>coap-URI = &quot;coap:&quot; &quot;//&quot; host [ &quot;:&quot; port ] path-abempty [ &quot;?&quot; query ]</code></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="differences-to-http">Differences to HTTP</h2>
+<ul>
+<li>adjusted to constraind, power limited devices (it's binary)</li>
+<li>reduction of header overheader by using UDP</li>
+<li>built-in support for observing resources</li>
+<li>both sides are client and server</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-scope-AAopLG3Y="" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="header-structure">Header structure</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code> 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|Ver| T |  TKL  |      Code     |          Message ID           |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|   Token (if any, TKL bytes) ...
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|   Options (if any) ...
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|1 1 1 1 1 1 1 1|    Payload (if any) ...
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</code></pre>
+<p>T: Indicates if this message is of type Confirmable (0), Non-confirmable (1), Acknowledgement (2), or Reset (3).  The semantics of these message types are defined in Section 4.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="message-types">Message types</h1>
+<ul>
+<li>Confirmable</li>
+<li>Non-confirmable</li>
+<li>Acknowledgement</li>
+<li>Reset message
+<ul>
+<li>indicates that a specific message could not be processed</li>
+<li>i.e. empty confirmable</li>
+</ul>
+</li>
+<li>Piggybacked Response</li>
+<li>Separate Response</li>
+<li>Empty</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="messaging-model-1">Messaging model (1)</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>                        Client              Server
+                           |                  |
+                           |   CON [0x7d34]   |
+                           +-----------------&gt;|
+                           |                  |
+                           |   ACK [0x7d34]   |
+                           |&lt;-----------------+
+                           |                  |
+                  Figure 2: Reliable Message Transmission
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="messaging-model-2">Messaging model (2)</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>                        Client              Server
+                           |                  |
+                           |   NON [0x01a0]   |
+                           +-----------------&gt;|
+                           |                  |
+                 Figure 3: Unreliable Message Transmission
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-scope-oKJ0lpjp="" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="messaging-model-3">Messaging model (3)</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>        Client              Server       Client              Server
+           |                  |             |                  |
+           |   CON [0xbc90]   |             |   CON [0xbc91]   |
+           | GET /temperature |             | GET /temperature |
+           |   (Token 0x71)   |             |   (Token 0x72)   |
+           +-----------------&gt;|             +-----------------&gt;|
+           |                  |             |                  |
+           |   ACK [0xbc90]   |             |   ACK [0xbc91]   |
+           |   2.05 Content   |             |  4.04 Not Found  |
+           |   (Token 0x71)   |             |   (Token 0x72)   |
+           |     &quot;22.5 C&quot;     |             |   &quot;Not found&quot;    |
+           |&lt;-----------------+             |&lt;-----------------+
+           |                  |             |                  |
+
+           Figure 4: Two GET Requests with Piggybacked Responses
+</code></pre>
+<p>Piggybacked: In the most basic case, the response is carried directly in the Acknowledgement message that acknowledges the request (which requires that the request was carried in a Confirmable message).  This is called a &quot;Piggybacked Response&quot;.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-scope-2te0PBJq="" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="messaging-model-4">Messaging model (4)</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>                        Client              Server
+                           |                  |
+                           |   CON [0x7a10]   |
+                           | GET /temperature |
+                           |   (Token 0x73)   |
+                           +-----------------&gt;|
+                           |                  |
+                           |   ACK [0x7a10]   |
+                           |&lt;-----------------+
+                           |                  |
+                           ... Time Passes  ...
+                           |                  |
+                           |   CON [0x23bb]   |
+                           |   2.05 Content   |
+                           |   (Token 0x73)   |
+                           |     &quot;22.5 C&quot;     |
+                           |&lt;-----------------+
+                           |                  |
+                           |   ACK [0x23bb]   |
+                           +-----------------&gt;|
+                           |                  |
+             Figure 5: A GET Request with a Separate Response
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="messaging-model-5">Messaging model (5)</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>                        Client              Server
+                           |                  |
+                           |   NON [0x7a11]   |
+                           | GET /temperature |
+                           |   (Token 0x74)   |
+                           +-----------------&gt;|
+                           |                  |
+                           |   NON [0x23bc]   |
+                           |   2.05 Content   |
+                           |   (Token 0x74)   |
+                           |     &quot;22.5 C&quot;     |
+                           |&lt;-----------------+
+                           |                  |
+       Figure 6: A Request and a Response Carried in Non-confirmable
+                                 Messages
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-scope-fxqBG4QM="" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="coap-options">CoAP Options</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>   +-----+---+---+---+---+----------------+--------+--------+----------+
+   | No. | C | U | N | R | Name           | Format | Length | Default  |
+   +-----+---+---+---+---+----------------+--------+--------+----------+
+   |   1 | x |   |   | x | If-Match       | opaque | 0-8    | (none)   |
+   |   3 | x | x | - |   | Uri-Host       | string | 1-255  | (see     |
+   |     |   |   |   |   |                |        |        | below)   |
+   |   4 |   |   |   | x | ETag           | opaque | 1-8    | (none)   |
+   |   5 | x |   |   |   | If-None-Match  | empty  | 0      | (none)   |
+   |   7 | x | x | - |   | Uri-Port       | uint   | 0-2    | (see     |
+   |     |   |   |   |   |                |        |        | below)   |
+   |   8 |   |   |   | x | Location-Path  | string | 0-255  | (none)   |
+   |  11 | x | x | - | x | Uri-Path       | string | 0-255  | (none)   |
+   |  12 |   |   |   |   | Content-Format | uint   | 0-2    | (none)   |
+   |  14 |   | x | - |   | Max-Age        | uint   | 0-4    | 60       |
+   |  15 | x | x | - | x | Uri-Query      | string | 0-255  | (none)   |
+   |  17 | x |   |   |   | Accept         | uint   | 0-2    | (none)   |
+   |  20 |   |   |   | x | Location-Query | string | 0-255  | (none)   |
+   |  35 | x | x | - |   | Proxy-Uri      | string | 1-1034 | (none)   |
+   |  39 | x | x | - |   | Proxy-Scheme   | string | 1-255  | (none)   |
+   |  60 |   |   | x |   | Size1          | uint   | 0-4    | (none)   |
+   +-----+---+---+---+---+----------------+--------+--------+----------+
+             C=Critical, U=Unsafe, N=NoCacheKey, R=Repeatable
+                             Table 1: Options
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="coap-observations">CoAP Observations</h1>
+<ul>
+<li>is an extension <a href="https://datatracker.ietf.org/doc/html/rfc7641#section-1.4">RFC 7641</a></li>
+</ul>
+<blockquote>
+<p>simple protocol extension for CoAP that enables CoAP clients to &quot;observe&quot; resources, i.e., to retrieve a representation of a resource and keep this representation updated by the server over a period of time [...] The protocol does not offer explicit means for setting up triggers or thresholds;</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="observe-option">Observe Option</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>       +-----+---+---+---+---+---------+--------+--------+---------+
+       | No. | C | U | N | R | Name    | Format | Length | Default |
+       +-----+---+---+---+---+---------+--------+--------+---------+
+       |   6 |   | x | - |   | Observe | uint   | 0-3 B  | (none)  |
+       +-----+---+---+---+---+---------+--------+--------+---------+
+                   C=Critical, U=Unsafe, N=No-Cache-Key, R=Repeatable
+                        Table 2: The Observe Option
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="coap-notification">CoAP Notification</h1>
+<ul>
+<li>The only difference between a notification and a normal response is the presence of the Observe Option.</li>
+<li>the server sends a notification with an appropriate response code (such as 4.04 Not Found) and removes the client's entry from the list of observers of the resource.</li>
+<li>can be confirmable or non-confirmable</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="coap-notification-2">CoAP Notification (2)</h1>
+<ul>
+<li>An acknowledgement message signals to the server that the client is alive and interested in receiving further notifications; if the server does not receive an acknowledgement in reply to a confirmable notification, it will assume that the client is no longer interested and will eventually remove the associated entry from the list of observers</li>
+<li>If a client does not recognize the token in a confirmable notification, it must not acknowledge the message and should reject it with a Reset message; otherwise, the client MUST acknowledge the message as usual.  In the case of a non-confirmable notification, rejecting the message with a Reset message is OPTIONAL.</li>
+<li>To cancel an observation the client sends on the next message a Reset message</li>
+<li>To de-register clients sets observation flag to 1</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="observe-server-side-requirements">Observe Server Side Requirements</h1>
+<ul>
+<li>on registration the server returns the current representation of the resource and adds client to list of observers</li>
+<li>consists of client endpoint + token</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-marpit-scope-sZlvyiHB="" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="observe-messaging">Observe messaging</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>         Observed   CLIENT  SERVER     Actual
+     t   State         |      |         State
+         ____________  |      |  ____________
+     1                 |      |
+     2    unknown      |      |     18.5 Cel
+     3                 +-----&gt;|                  Header: GET 0x41011633
+     4                 | GET  |                   Token: 0x4a
+     5                 |      |                Uri-Path: temperature
+     6                 |      |                 Observe: 0 (register)
+     7                 |      |
+     8                 |      |
+     9   ____________  |&lt;-----+                  Header: 2.05 0x61451633
+    10                 | 2.05 |                   Token: 0x4a
+    11    18.5 Cel     |      |                 Observe: 9
+    12                 |      |                 Max-Age: 15
+    13                 |      |                 Payload: &quot;18.5 Cel&quot;
+    14                 |      |
+    15                 |      |  ____________
+    16   ____________  |&lt;-----+                  Header: 2.05 0x51457b50
+    17                 | 2.05 |     19.2 Cel      Token: 0x4a
+    18    19.2 Cel     |      |                 Observe: 16
+    29                 |      |                 Max-Age: 15
+    20                 |      |                 Payload: &quot;19.2 Cel&quot;
+    21                 |      |
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-marpit-scope-3oZVjlH6="" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;"><pre is="marp-pre" data-auto-scaling="downscale-only"><code>     t   Observed   CLIENT  SERVER     Actual
+         ____________  |      |  ____________
+    22                 |      |
+    23    19.2 Cel     |      |     19.2 Cel
+    24                 |      |  ____________
+    25                 | X----+                  Header: 2.05 0x51457b51
+    26                 | 2.05 |     19.7 Cel      Token: 0x4a
+    27                 |      |                 Observe: 25
+    28                 |      |                 Max-Age: 15
+    29                 |      |                 Payload: &quot;19.7 Cel&quot;
+    30                 |      |
+    31   ____________  |      |
+    32                 |      |
+    33    19.2 Cel     |      |
+    34    (stale)      |      |
+    35                 |      |
+    36                 |      |
+    37                 |      |
+    38                 +-----&gt;|                  Header: GET 0x41011634
+    39                 | GET  |                   Token: 0xb2
+    40                 |      |                Uri-Path: temperature
+    41                 |      |                 Observe: 0 (register)
+    42                 |      |
+    43                 |      |
+    44   ____________  |&lt;-----+                  Header: 2.05 0x61451634
+    45                 | 2.05 |                   Token: 0xb2
+    46    19.7 Cel     |      |                 Observe: 44
+    47                 |      |                 Max-Age: 15
+    48                 |      |                    ETag: 0x78797a7a79
+    49                 |      |                 Payload: &quot;19.7 Cel&quot;
+    50                 |      |
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./largefile.jpg&quot;);background-size:750px 500px;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="25" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="content">
+<blockquote>
+<p>CoAP is nice for small values, but what about big files, i.e. FOTA?</p>
+</blockquote>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-marpit-scope-dE6l8tSd="" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="coap-blockwise-transfer">CoAP Blockwise transfer</h1>
+
+<p>TLDR: you want to avoid splitting on UDP or IP level</p>
+<ul>
+<li>Adds a pair of Block options
+<ul>
+<li>Transfers larger than what can be accommodated in onstrained network link layer packets can be performed in smaller blocks</li>
+<li>no hard-to-manage conversation state is created at the adaptation layer or IP layer for fragmentation</li>
+<li>the transfer of each block is acknowledged, enabling individual retransmission if required</li>
+<li>both sides discuss block sizes: <code>Size1, Size2, Block1, Block2</code></li>
+</ul>
+</li>
+</ul>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc7959">RFC 7959 - Source</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-marpit-scope-gm6Xde85="" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<p>Download example - <code>Block2</code></p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>   CLIENT                                                     SERVER
+     |                                                          |
+     | CON [MID=1234], GET, /status, 2:0/0/64           ------&gt; |
+     |                                                          |
+     | &lt;------   ACK [MID=1234], 2.05 Content, 2:0/1/64         |
+     |                                                          |
+     | CON [MID=1235], GET, /status, 2:1/0/64           ------&gt; |
+     |                                                          |
+     | &lt;------   ACK [MID=1235], 2.05 Content, 2:1/1/64         |
+     :                                                          :
+     :                          ...                             :
+     :                                                          :
+     | CON [MID=1238], GET, /status, 2:4/0/64           ------&gt; |
+     |                                                          |
+     | &lt;------   ACK [MID=1238], 2.05 Content, 2:4/1/64         |
+     |                                                          |
+     | CON [MID=1239], GET, /status, 2:5/0/64           ------&gt; |
+     |                                                          |
+     | &lt;------   ACK [MID=1239], 2.05 Content, 2:5/0/64         |
+
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-marpit-scope-g0Q2DwmJ="" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<p>Upload example - <code>Block1</code></p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>   CLIENT                                                     SERVER
+     |                                                          |
+     | CON [MID=1234], PUT, /options, 1:0/1/128    ------&gt;      |
+     |                                                          |
+     | &lt;------   ACK [MID=1234], 2.31 Continue, 1:0/1/32        |
+     |                                                          |
+     | CON [MID=1235], PUT, /options, 1:4/1/32     ------&gt;      |
+     |                                                          |
+     | &lt;------   ACK [MID=1235], 2.31 Continue, 1:4/1/32        |
+     |                                                          |
+     | CON [MID=1236], PUT, /options, 1:5/1/32     ------&gt;      |
+     |                                                          |
+     | &lt;------   ACK [MID=1235], 2.31 Continue, 1:5/1/32        |
+     |                                                          |
+     | CON [MID=1237], PUT, /options, 1:6/0/32     ------&gt;      |
+     |                                                          |
+     | &lt;------   ACK [MID=1236], 2.04 Changed, 1:6/0/32         |
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="coap-blockwise-transfer-1">CoAP Blockwise transfer</h1>
+<ul>
+<li>Wireshark <img class="emoji" draggable="false" alt="🦈" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f988.svg" data-marp-twemoji=""/></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="message-deduplication">Message Deduplication</h1>
+<blockquote>
+<p>Why? Because we have a deduplicator in our code</p>
+</blockquote>
+<p>See backup slides <img class="emoji" draggable="false" alt="🤓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f913.svg" data-marp-twemoji=""/></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="coap-conclusion">CoAP Conclusion</h1>
+<ul>
+<li>CoAP stands out as a robust and efficient protocol tailored for IoT scenarios.</li>
+<li>Its lightweight design, support for push notifications, and blockwise transfer make it well-suited for resource-constrained devices.</li>
+<li>CoAP's reliable messaging model sets a solid foundation for IoT communication.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="lwm2m">LwM2m</h1>
+<p><a href="https://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf">Technical Spec 1.1</a><br />
+<a href="https://www.openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Transport-V1_1-20180710-A.pdf">Transport Spec 1.1</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="what-is-lwm2m">What is LwM2m?</h2>
+<blockquote>
+<p>Lightweight Machine-to-Machine (LwM2M) is an IoT protocol designed for efficient and secure device management, building on the CoAP protocol. It provides a standardized way for managing communication between IoT devices and servers, offering features such as remote device configuration, firmware updates, and real-time data reporting. LwM2M focuses on simplicity, low overhead, and secure interactions, making it well-suited for resource-constrained devices in diverse IoT deployments.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="comparison-to-coap">Comparison to CoAP</h2>
+<ul>
+<li>they serve different purposes in the IoT ecosystem</li>
+<li>LwM2M is a higher-level protocol that builds on CoAP and is specifically designed for device management in IoT deployments</li>
+<li>LwM2M provides a standardized framework and data model for managing devices and their resources</li>
+<li>LwM2M extends CoAP with additional features and semantics tailored for device management, such as the ability to perform remote firmware updates, execute commands on devices, and manage device registration and security</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="tldr">TLDR</h2>
+<blockquote>
+<p>LwM2M can be seen as an application-layer protocol that <em>leverages CoAP</em> for communication while <em>adding higher-level</em> semantics for managing IoT devices</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-interfaces">LwM2m interfaces</h2>
+<ul>
+<li>Bootstrap Interface <img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/274c.svg" data-marp-twemoji=""/></li>
+<li>Client Registration interface</li>
+<li>Device Mangement and Service Enablement interface</li>
+<li>Information Reporting interface</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="bootsrap-interface">Bootsrap Interface</h2>
+<ul>
+<li>Device Initialization</li>
+<li>Security Credential Provisioning</li>
+<li>Configuration Management</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="client-registration-interface">Client Registration Interface</h2>
+<ul>
+<li>Registration, Update and Deregistration</li>
+<li>Lifetime Management</li>
+<li>Endpoint and Object Discovery</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./clientregistration.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="39" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="device-management-and-service-enablement-interface">Device Management and Service Enablement Interface</h2>
+<ul>
+<li>Remote Configuration</li>
+<li>Firmware Updates</li>
+<li>Resource Monitoring and Control</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./serviceenablement.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="41" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="information-reporting-interface">Information Reporting Interface</h2>
+<ul>
+<li>Observation and Notification</li>
+<li>Periodic Reporting</li>
+<li>Event Reporting</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./informationreporting.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="43" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-identifiers-and-resources">LwM2m Identifiers and Resources</h2>
+<p>Follows a resource model based on</p>
+<ul>
+<li>Client has different objects</li>
+<li>Can have an object multiple times</li>
+<li>Objects have different resources</li>
+<li>Resource may have multiple values</li>
+</ul>
+<blockquote>
+<p>/{Object Id}/{Instance Id}/{Resource Id}/{Multiple-Instance Resources Id}</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-object">LwM2m Object</h2>
+<ul>
+<li>specified in a separate document</li>
+<li>may have different versions
+<ul>
+<li>must be set in the registration</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-resource">LwM2m Resource</h2>
+<p>A resource may</p>
+<ul>
+<li>contain a value (readable and/or writeable)</li>
+<li>can be addressed by a LwM2m Server to trigger an action (executable)</li>
+</ul>
+<p>This goes along with the operations (read, write, execute)</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./model.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="47" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-operations">LwM2m Operations</h2>
+<ul>
+<li>
+<p>Registration</p>
+</li>
+<li>
+<p>Update</p>
+</li>
+<li>
+<p>Deregistration</p>
+</li>
+<li>
+<p>Write Attribute</p>
+</li>
+<li>
+<p>(Composite-) Observation</p>
+</li>
+<li>
+<p>Notify</p>
+</li>
+<li>
+<p>Send</p>
+</li>
+<li>
+<p>Execution</p>
+</li>
+<li>
+<p>For all mappings to CoAP see: <code>Table: 6.4.4.-1</code> and <code>Table: 6.4.5.-1</code> <a href="https://www.openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Transport-V1_1-20180710-A.pdf">here</a></p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-registration">LwM2m Registration</h2>
+<ul>
+<li>Clients boots and wants to communicate with the LwM2m Server
+<ul>
+<li>Note: On CoAP level both parties act as server <strong>and</strong> client</li>
+</ul>
+</li>
+<li><code>CoAP POST on /rd?lwm2m={Version}&amp;ep={ICCID}&amp;lt={number}</code> with object model in payload</li>
+<li>Server responses with <code>CoAP 2.01</code> and option: <code>Location-Path</code> for a device specifc endpoint</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-registration-1">LwM2m Registration</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Endpoint Client Name</td>
+<td>No</td>
+<td>See Section 7.3. Identifiers</td>
+<td></td>
+</tr>
+<tr>
+<td>Lifetime</td>
+<td>Yes</td>
+<td></td>
+<td>Indicates the expected lifetime of the registration for this LwM2M client. This value MUST be the same as the value held in the Resource named &quot;Lifetime&quot; of the corresponding instance of Server Object (ID #1): /1/x/1.</td>
+</tr>
+<tr>
+<td>LwM2M Version</td>
+<td>Yes</td>
+<td></td>
+<td>Indicates the version of the LwM2M Enabler that the LwM2M Client supports. The LwM2M version number reported MUST correspond to the approved version number of this document.</td>
+</tr>
+<tr>
+<td>Binding Mode</td>
+<td>No</td>
+<td>U</td>
+<td>Indicates the supported binding modes in the LwM2M Client. This value SHOULD be the same as the value in the “Supported Binding and Modes” resource in the Device Object (/3/0/16). The valid values of the parameter are listed in Section 6.2.1.2. Behaviour with Current Transport Binding and Modes</td>
+</tr>
+<tr>
+<td>Queue Mode</td>
+<td>No</td>
+<td></td>
+<td>Indicates whether Queue Mode is supported. The Queue Mode is useful when the LwM2M Device is not reachable by the LwM2M Server at all times and it helps the LwM2M Client to reduce power consumption by sleeping longer.</td>
+</tr>
+<tr>
+<td>SMS Number</td>
+<td>No</td>
+<td></td>
+<td>The value of this parameter is the MSISDN or External Identifier where the LwM2M Client can be reached for use with the SMS binding or when both the LwM2M Client and the LwM2M Server support the SMS registration update trigger mechanism defined in [LwM2M-TRANSPORT].</td>
+</tr>
+<tr>
+<td>Objects and Object Instances</td>
+<td>Yes</td>
+<td></td>
+<td>The list of Objects supported and Object Instances available on the LwM2M Client (Security Object ID:0, and OSCORE Object ID:21, if present, MUST NOT be part of this list.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-update">LwM2m Update</h2>
+<ul>
+<li>LwM2M Client updates its registration information</li>
+<li>Update operation can be initiated by the LwM2M Server via an &quot;Execute&quot; operation on the &quot;Registration Update Trigger</li>
+<li>The object list must be transmitted again</li>
+<li><code>CoAP POST /{location}?lt={Lifetime}&amp;b={binding}</code></li>
+</ul>
+<p>Use cases:</p>
+<ol>
+<li>Lifetime update</li>
+<li>Objects changed</li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-deregistration">LwM2m Deregistration</h2>
+<ul>
+<li>LwM2m Client goes offline</li>
+<li><code>CoAP DELETE /{location}</code></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-registration-deregistration">LwM2m Registration, Deregistration</h2>
+<ul>
+<li>Wireshark <img class="emoji" draggable="false" alt="🦈" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f988.svg" data-marp-twemoji=""/></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-write">LwM2m Write</h2>
+<ul>
+<li>Change a value of a resource</li>
+<li><code>CoAP PUT or POST on /{Object ID}/{Object Instance ID}/{Resource ID}/{Resource Instance ID} or /{Object ID}/{Object Instance ID}</code> with payload</li>
+<li>Time Syncronization</li>
+<li>Device Configuration: How often to send data (assettracker specific)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-execute">LwM2m Execute</h2>
+<ul>
+<li>Initiate some action on the client</li>
+<li>Can only be done on resources</li>
+<li>Example: Execute an update</li>
+<li><code>CoAP POST on /{Object ID}/{Object Instance ID}/{Resource ID}</code> (optional: content, format: text/plain or none)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-write-attribute">LwM2m Write Attribute</h2>
+<ul>
+<li>Configure Observations</li>
+<li><code>CoAP PUT {Object ID}/{Object Instance ID}/{Resource ID}/{Resource Instance ID}?pmin={minimum period}&amp;pmax={maximum period}&amp;gt={greater than}&amp;lt={less than}&amp;st={step}&amp;epmin={minimum evaluation period}&amp;epmax={maximum evaluation period}</code></li>
+</ul>
+<p><a href="https://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf#%BBy%E6e%B6%5C%FEj%3A%A91%DF%F8c%CFw3%BD%23%5E">Link to table with attributes</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-write-attribute-examples">LwM2m Write Attribute examples</h2>
+<ul>
+<li>Write-Attributes <code>/3/0/9?pmin=1</code> means the Battery Level value will be notified to the Server with a minimum interval of 1sec;</li>
+<li>Write-Attributes <code>/3/0/9?gt=45&amp;st=10</code> means the Battery Level will be notified to the Server when:
+<ol>
+<li>old value is 45 and new value is 50 due to gt condition</li>
+<li>old value is 38 and new value is 49 due to both gt and step conditions</li>
+</ol>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-composite--observations">LwM2m (Composite-) Observations</h2>
+<ul>
+<li><code>CoAP GET /{Object ID}/{Object Instance ID}/{Resource ID}/{Resource Instance ID}</code> with Observe option set</li>
+<li><code>CoAP FETCH</code> with Observer option set and URI paths in body</li>
+<li>To cancel an observation send a <code>Reset</code> message on a <code>Notify</code> message</li>
+<li>Wireshark <img class="emoji" draggable="false" alt="🦈" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f988.svg" data-marp-twemoji=""/></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-notify">LwM2m Notify</h2>
+<ul>
+<li>An asynchronous message containing the CoAP token</li>
+<li>Can be confirmable of non-confirmable</li>
+<li>See <code>Figure: 6.4.5.-1</code> <a href="https://www.openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Transport-V1_1-20180710-A.pdf">here</a> for a flow example</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="lwm2m-send">LwM2m Send</h2>
+<ul>
+<li>Clients sends data without any configuration from server side</li>
+<li><code>CoAP POST on /dp</code> with data in payload (format: CBOR or JSON)</li>
+</ul>
+<blockquote>
+<p>The LwM2M Server MAY use the &quot;Mute Send&quot; Resource in the LwM2M Server Object (Resource ID 23) to enable or disable the use of the &quot;Send&quot; operation.<br />
+The reported LwM2M Object Instances (potentially different Object types) MUST have been registered by the LwM2M Client to the LwM2M Server.</p>
+</blockquote>
+<ul>
+<li>Wireshark <img class="emoji" draggable="false" alt="🦈" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f988.svg" data-marp-twemoji=""/></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./outro.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="61" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="message-deduplication-in-coap">Message Deduplication in CoAP</h1>
+<p><strong>Overview:</strong></p>
+<ul>
+<li>In CoAP, message deduplication is crucial for handling duplicate Confirmable or Non-confirmable messages.</li>
+<li>Ensures reliable communication and prevents unintended processing of duplicate messages.</li>
+</ul>
+<p><strong>Confirmable Messages:</strong></p>
+<ul>
+<li><strong>Challenge:</strong> Confirmable messages may be received multiple times (lost acknowledgments, timeouts).</li>
+<li><strong>Action:</strong> Recipient should acknowledge each duplicate Confirmable message using the same Acknowledgement or Reset message.</li>
+<li><strong>Processing:</strong> Recipient should process any request or response in the message only once.</li>
+<li><strong>Relaxation:</strong> Allowed for idempotent requests, where duplicate processing is less costly than tracking previous responses.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<p><strong>Examples of Relaxation:</strong></p>
+<ol>
+<li>A server may relax the requirement to answer all retransmissions of an idempotent request (GET, PUT, DELETE) to avoid maintaining state for Message IDs.</li>
+<li>A constrained server might relax this requirement for certain non-idempotent requests based on favorable trade-offs in application semantics.</li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="message-deduplication-in-coap-1">Message Deduplication in CoAP</h2>
+<p><strong>Non-confirmable Messages:</strong></p>
+<ul>
+<li><strong>Challenge:</strong> Non-confirmable messages may be received multiple times within NON_LIFETIME.</li>
+<li><strong>Action:</strong> Recipient SHOULD silently ignore any duplicated Non-confirmable message.</li>
+<li><strong>Processing:</strong> Recipient SHOULD process any request or response in the message only once.</li>
+<li><strong>Relaxation:</strong> General rule MAY be relaxed based on specific message semantics.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h2 id="message-deduplication-in-coap-2">Message Deduplication in CoAP</h2>
+<p><strong>Conclusion:</strong></p>
+<ul>
+<li>Message deduplication ensures reliable and efficient handling of CoAP messages, with flexibility for relaxation in certain scenarios, especially for idempotent requests or based on application-specific trade-offs.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;">
+<h1 id="lwm2m-queue-mode">LwM2m Queue Mode</h1>
+<ul>
+<li>Is set dureing registration</li>
+<li>When the LwM2M Client is not online, the LwM2M Server does not immediately send downlink requests, but instead waits until the LwM2M Client is online</li>
+<li>Due to the congestion control approach used by CoAP the LwM2M Server has to wait for a response to a request before sending out the next request from the queue since [CoAP] limits the number of simultaneous outstanding interactions to 1.</li>
+<li>For more details see <a href="https://www.openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Transport-V1_1-20180710-A.pdf">here</a> under 6.5 Queue Mode Operation</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67" data-theme="hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m" lang="de-DE" style="--theme:hfndvx1ngl7rumi50727n1jba72ccf6yic0y6koh4o9m;"></section>
+<script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{constructor(){super(),this.svgPreserveAspectRatio="xMinYMid meet";const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver(((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()}))}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){var t,s,o,r,a;this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=null!==(t=this.shadowRoot.querySelector(`div[${e}]`))&&void 0!==t?t:void 0;const l=this.svg;this.svg=null!==(o=null===(s=this.wrapper)||void 0===s?void 0:s.querySelector(`svg[${i}]`))&&void 0!==o?o:void 0,this.svg!==l&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=null!==(a=null===(r=this.svg)||void 0===r?void 0:r.querySelector(`span[${n}]`))&&void 0!==a?a:void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame((()=>{t.style.display=""})))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){var t,e,i,n,s,o,r;let a=Math.ceil(null!==(e=null===(t=this.containerSize)||void 0===t?void 0:t.width)&&void 0!==e?e:0);const l=Math.ceil(null!==(n=null===(i=this.containerSize)||void 0===i?void 0:i.height)&&void 0!==n?n:0);void 0!==this.dataset.downscaleOnly&&(a=Math.max(a,null!==(o=null===(s=this.wrapperSize)||void 0===s?void 0:s.width)&&void 0!==o?o:0));const c=null===(r=this.svg)||void 0===r?void 0:r.querySelector(":scope > foreignObject");if(null==c||c.setAttribute("width",`${a}`),null==c||c.setAttribute("height",`${l}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${a} ${l}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=a<=0||l<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const o=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this.attachShadow({mode:"open"})}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_update(){const t=i?`<style>:host { ${i} }</style>`:"";let e="<slot></slot>";const{autoScaling:n}=this.dataset;if(void 0!==n){e=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===n?"data-downscale-only":""}>${e}</marp-auto-scaling>`}this.shadowRoot.innerHTML=t+e}};let r;const a=Symbol();let l;const c="marpitSVGPolyfill:setZoomFactor,",d=Symbol(),g=Symbol();const h=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[u]:[],i={then:e=>(t?(async()=>{if(void 0===l){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise((t=>{i.addEventListener("load",(()=>t()))}));i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),l=e.getImageData(5,5,1,1).data[3]<128}return l})().then((t=>{null==e||e(t?[u]:[])})):null==e||e([]),i)};return Object.assign(e,i)};let p,m;function u(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",(({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(c)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(m=i)}}catch(t){console.error(t)}})));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,s,o,r;t.style.transform||(t.style.transform="translateZ(0)");const a=i||m||t.currentScale||1;p!==a&&(p=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(r=null===(o=n.y)||void 0===o?void 0:o.baseVal.value)&&void 0!==r?r:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}})),!1!==n&&Array.from(e.querySelectorAll("iframe"),(({contentWindow:t})=>{null==t||t.postMessage(`${c}${n}`,"null"===window.origin?"*":window.origin)}))}function v({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[d])return t[d];let e=!0;const i=()=>{e=!1,delete t[d]};Object.defineProperty(t,d,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await h()}finally{s=!0}})();const o=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(o)};return o(),i}(e);return t?(i(),()=>{}):i}p=1,m=void 0;const b=Symbol(),w=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,a=t[n].proto();null!=r||(r=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is")),r&&a!==HTMLElement?i||customElements.define(s,o(a,{style:t[n].style}),{extends:n}):(i||customElements.define(s,o(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach((t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)})))}window[a]=!0})(e),e[b])return e[b];const i=v({target:e}),n=()=>{i(),delete e[b]},l=Object.assign(n,{cleanup:n,update:()=>w(e)});return Object.defineProperty(e,b,{configurable:!0,value:l}),l},y=document.currentScript;w(y?y.getRootNode():document)}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>We simply use CoAP and it makes sense to understand what's going on.
+How CoAP maps to LwM2m and how it is implemented.</p></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>It's an application protocol very similar to HTTP with specialities for IoT, i.e. being small, both are server and client, observations...</p></div><div class="bespoke-marp-note" data-index="14" tabindex="0"><p>without risking the client repeatedly retransmitting the request message</p></div><div class="bespoke-marp-note" data-index="18" tabindex="0"><p>If the server
+   returns a 2.xx response that includes an Observe Option as well, the
+   server has successfully added an entry with the client endpoint and
+   request token to the list of observers of the target resource, and
+   the client will be notified of changes to the resource state.</p></div><div class="bespoke-marp-note" data-index="21" tabindex="0"><p>IP Address, Port number, optional security parameters and transport protocol</p></div><div class="bespoke-marp-note" data-index="22" tabindex="0"><p>Figure 3: A Client Registers and Receives One Notification of the
+         Current State and One of a New State upon a State Change</p></div><div class="bespoke-marp-note" data-index="28" tabindex="0"><p>Strange naming:
+
+    In naming these options (for block-wise transfers as well as in Section 4), we use the number 1 (&quot;Block1&quot;, &quot;Size1&quot;) to refer to the transfer of the resource representation that pertains to the request, and the number 2 (&quot;Block2&quot;, &quot;Size2&quot;) to refer to the transfer of the resource representation for the response.
+
+Header Overhead:
+    IP fragmentation introduces additional header overhead for each fragment, and this overhead may be significant, especially in constrained networks where every byte matters. CoAP blockwise transfer aims to minimize the overhead by allowing for efficient transmission of smaller blocks, each with its own header, but potentially more manageable than IP fragments.
+
+Reliability:
+    IP fragmentation does not inherently provide per-fragment acknowledgment. If a fragment is lost or corrupted, the entire IP datagram needs to be retransmitted. In contrast, CoAP blockwise transfer allows for acknowledgment at the block level, providing a more granular and efficient mechanism for handling transmission errors.
+
+Device Constraints:
+
+    IoT devices often have limited processing power and memory. Handling IP fragmentation may impose additional processing overhead on these devices. CoAP blockwise transfer is designed to be lightweight and suitable for devices with constrained resources.
+
+End-to-End Considerations:
+
+    CoAP is an end-to-end protocol, and blockwise transfer allows for end-to-end acknowledgment and retransmission. In contrast, IP fragmentation may be handled by intermediate devices along the communication path, making it less suitable for end-to-end communication semantics.</p></div><div class="bespoke-marp-note" data-index="36" tabindex="0"><p>Bootstrap Interface:
+
+    Device Initialization:
+        Enables the bootstrapping of a device, allowing it to obtain essential information and parameters required for communication with a server.
+        Supports secure authentication and authorization processes during device initialization.
+
+    Security Credential Provisioning:
+        Facilitates the provisioning of security credentials (such as keys and certificates) to establish a secure connection between the device and the server.
+        Allows the device to securely register with a server or multiple servers for subsequent communication.
+
+    Configuration Management:
+        Provides mechanisms for configuring essential parameters on the device, ensuring its proper integration into the IoT ecosystem.
+        Allows for dynamic updates to device configurations, enhancing adaptability to changing network conditions.</p></div><div class="bespoke-marp-note" data-index="37" tabindex="0"><p>Client Registration Interface:
+
+    Registration and Deregistration:
+        Allows devices to register with an LwM2M server, providing necessary information for identification and communication.
+        Supports secure deregistration processes, enabling devices to gracefully exit the network or update their registration details.
+
+    Lifetime Management:
+        Defines mechanisms for managing the lifetime of a device's registration with the server.
+        Allows devices to periodically refresh their registration, ensuring continuous connectivity and updating of server-side information.
+
+    Endpoint and Object Discovery:
+        Provides means for discovering endpoints and objects supported by registered devices.
+        Enables servers to retrieve information about registered devices, facilitating effective device management and service enablement.</p></div><div class="bespoke-marp-note" data-index="39" tabindex="0"><p>Device Management and Service Enablement Interface:
+
+    Remote Configuration:
+        Supports remote configuration of device parameters, allowing for dynamic adjustments to settings, thresholds, and behavior.
+        Facilitates efficient customization of device behavior without the need for physical access.
+
+    Firmware Updates:
+        Enables over-the-air firmware updates for devices, ensuring they remain up-to-date with the latest software versions.
+        Supports secure and reliable delivery of firmware updates to mitigate risks associated with outdated software.
+
+    Resource Monitoring and Control:
+        Provides interfaces for monitoring and controlling device resources, such as sensors, actuators, and other functionalities.
+        Enables real-time interactions with devices for proactive management and responsive service enablement.</p></div><div class="bespoke-marp-note" data-index="41" tabindex="0"><p>Information Reporting Interface:
+
+    Observation and Notification:
+        Allows clients to observe specific resources and receive notifications when those resources change.
+        Supports efficient monitoring of critical data and triggers responsive actions based on observed changes.
+
+    Periodic Reporting:
+        Enables devices to periodically report information to the server, facilitating continuous monitoring and data collection.
+        Supports customizable reporting intervals based on the specific requirements of the application.
+
+    Event Reporting:
+        Provides mechanisms for devices to report events and anomalies in real-time.
+        Enhances the ability to respond promptly to critical events, ensuring timely actions and proactive management.</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@3.4.0/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),i={},a=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){i[e]=(i[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(i[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){o[e]&&(n&&l("deactivate",a(n,t)),n=o[e],l("activate",a(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;l(e>0?"next":"prev",a(n,t))&&c(r,t)},u={off:s,on:function(e,t){return(i[e]||(i[e]=[])).push(t),s.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return o.indexOf(n);l("slide",a(o[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){l("destroy",a(n,e)),i={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u}},n=e(t);const r=document.body,o=(...e)=>history.replaceState(...e),i="presenter",a="next",s=["",i,a],l="bespoke-marp-",c=`data-${l}`,d=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const i=e.toString();return`${t}//${n}${r}${i?"?":""}${i}${o}`},u=()=>r.dataset.bespokeView,f=e=>new URLSearchParams(location.search).get(e),m=(e,t={})=>{var n;const r={location,setter:o,...t},i=new URLSearchParams(r.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?i.set(t,n):i.delete(t)}try{r.setter({...null!==(n=window.history.state)&&void 0!==n?n:{}},"",d(i,r.location))}catch(e){console.error(e)}},g=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch(e){return!1}})(),p=e=>{try{return localStorage.getItem(e)}catch(e){return null}},v=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch(e){return!1}},h=e=>{try{return localStorage.removeItem(e),!0}catch(e){return!1}},y=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},b=e=>{e.parent.classList.add(`${l}parent`),e.slides.forEach((e=>e.classList.add(`${l}slide`))),e.on("activate",(t=>{const n=`${l}active`,r=t.slide,o=r.classList,i=!o.contains(n);if(e.slides.forEach((e=>{e.classList.remove(n),y(e,!0)})),o.add(n),y(r,!1),i){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}}))},w=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map((e=>[null,...e.querySelectorAll("[data-marpit-fragment]")]))});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach(((e,t)=>{e.forEach(((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${c}fragment`,(i?"":"in")+"active");const a=`${c}current-fragment`;t===r&&n===o?e.setAttribute(a,"current"):e.removeAttribute(a)}))})),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",(({fragment:i=!0})=>{if(i){if(r(1))return o(t,n+1),!1;const i=t+1;e.fragments[i]&&o(i,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const i=e.fragments[t+1];i&&o(t+1,i.length-1)}})),e.on("prev",(({fragment:i=!0})=>{if(r(-1)&&i)return o(t,n-1),!1;const a=t-1;e.fragments[a]&&o(a,e.fragments[a].length-1)})),e.on("slide",(({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)})),o(0,0)},x=document,k=()=>!(!x.fullscreenEnabled&&!x.webkitFullscreenEnabled),$=()=>!(!x.fullscreenElement&&!x.webkitFullscreenElement),E=e=>{e.fullscreen=()=>{k()&&(async()=>{return $()?null===(e=x.exitFullscreen||x.webkitExitFullscreen)||void 0===e?void 0:e.call(x):((e=x.body)=>{var t;return null===(t=e.requestFullscreen||e.webkitRequestFullscreen)||void 0===t?void 0:t.call(e)})();var e})()},document.addEventListener("keydown",(t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!k()||(e.fullscreen(),t.preventDefault())}))},L=`${l}inactive`,S=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let i;const a=()=>{i&&clearTimeout(i),i=setTimeout((()=>{r.add(L),o()}),e),r.contains(L)&&(r.remove(L),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,a);setTimeout(a,0)},P=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],_=e=>{e.parent.addEventListener("keydown",(e=>{if(!e.target)return;const t=e.target;(P.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()}))},T=e=>{window.addEventListener("load",(()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${c}load`,e?"":"hideable")}}))},I=({interval:e=250}={})=>t=>{document.addEventListener("keydown",(e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()}));let n,r,o=0;t.parent.addEventListener("wheel",(i=>{let a=!1;const s=(e,t)=>{e&&(a=a||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),(null==e?void 0:e.parentElement)&&s(e.parentElement,t)};if(0!==i.deltaX&&s(i.target,"X"),0!==i.deltaY&&s(i.target,"Y"),a)return;i.preventDefault();const l=Math.sqrt(i.deltaX**2+i.deltaY**2);if(void 0!==i.wheelDelta){if(void 0===i.webkitForce&&Math.abs(i.wheelDelta)<40)return;if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<4)return}else if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout((()=>{n=0}),e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let u;(i.deltaX>0||i.deltaY>0)&&(u="next"),(i.deltaX<0||i.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())}))},M=(e=`.${l}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${c}osc=${JSON.stringify(e)}]`).forEach(n)};return k()||n("fullscreen",(e=>e.style.display="none")),g||n("presenter",(e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."})),e=>{t.addEventListener("click",(t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?null==e||e.fullscreen():"presenter"===n&&e.openPresenterView()}})),e.parent.appendChild(t),e.on("activate",(({index:t})=>{n("page",(n=>n.textContent=`Page ${t+1} of ${e.slides.length}`))})),e.on("fragment",(({index:t,fragments:r,fragmentIndex:o})=>{n("prev",(e=>e.disabled=0===t&&0===o)),n("next",(n=>n.disabled=t===e.slides.length-1&&o===r.length-1))})),e.on("marp-active",(()=>y(t,!1))),e.on("marp-inactive",(()=>y(t,!0))),k()&&(e=>{for(const t of["","webkit"])x.addEventListener(t+"fullscreenchange",e)})((()=>n("fullscreen",(e=>e.classList.toggle("exit",k()&&$())))))}},O=e=>{window.addEventListener("message",(t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),i=Number.parseInt(n,10)+1;i>=e.fragments[o].length&&(o+=1,i=0),e.slide(o,{fragment:i})}}))};var A=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"];let C=e=>String(e).replace(/[&<>"']/g,(e=>`&${D[e]};`)),D={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},N="dangerouslySetInnerHTML",B={className:"class",htmlFor:"for"},q={};function K(e,t){let n=[],r="";t=t||{};for(let e=arguments.length;e-- >2;)n.push(arguments[e]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(let e in t)!1!==t[e]&&null!=t[e]&&e!==N&&(r+=` ${B[e]?B[e]:C(e)}="${C(t[e])}"`);r+=">"}if(-1===A.indexOf(e)){if(t[N])r+=t[N].__html;else for(;n.length;){let e=n.pop();if(e)if(e.pop)for(let t=e.length;t--;)n.push(e[t]);else r+=!0===q[e]?e:C(e)}r+=e?`</${e}>`:""}return q[r]=!0,r}const j=({children:e})=>K(null,null,...e),F=`${l}presenter-`,V={container:`${F}container`,dragbar:`${F}dragbar-container`,next:`${F}next`,nextContainer:`${F}next-container`,noteContainer:`${F}note-container`,noteWrapper:`${F}note-wrapper`,noteButtons:`${F}note-buttons`,infoContainer:`${F}info-container`,infoPage:`${F}info-page`,infoPageText:`${F}info-page-text`,infoPagePrev:`${F}info-page-prev`,infoPageNext:`${F}info-page-next`,noteButtonsBigger:`${F}note-bigger`,noteButtonsSmaller:`${F}note-smaller`,infoTime:`${F}info-time`,infoTimer:`${F}info-timer`},U=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=V.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",K(j,null,K("div",{class:V.nextContainer},K("iframe",{class:V.next,src:"?view=next"})),K("div",{class:V.dragbar}),K("div",{class:V.noteContainer},K("div",{class:V.noteWrapper}),K("div",{class:V.noteButtons},K("button",{class:V.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),K("button",{class:V.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),K("div",{class:V.infoContainer},K("div",{class:V.infoPage},K("button",{class:V.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),K("span",{class:V.infoPageText}),K("button",{class:V.infoPageNext,tabindex:"-1",title:"Next"},"Next")),K("time",{class:V.infoTime,title:"Current time"}),K("time",{class:V.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(V.dragbar).addEventListener("mousedown",(()=>{t=!0,r(V.dragbar).classList.add("active")})),window.addEventListener("mouseup",(()=>{t=!1,r(V.dragbar).classList.remove("active")})),window.addEventListener("mousemove",(e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(V.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)})),r(V.nextContainer).addEventListener("click",(()=>e.next()));const n=r(V.next),o=(i=n,(e,t)=>{var n;return null===(n=i.contentWindow)||void 0===n?void 0:n.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin)});var i;n.addEventListener("load",(()=>{r(V.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",(({index:e,fragmentIndex:t})=>o(e,t)))}));const a=document.querySelectorAll(".bespoke-marp-note");a.forEach((e=>{e.addEventListener("keydown",(e=>e.stopPropagation())),r(V.noteWrapper).appendChild(e)})),e.on("activate",(()=>a.forEach((t=>t.classList.toggle("active",t.dataset.index==e.slide())))));let s=0;const l=e=>{s=Math.max(-5,s+e),r(V.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},c=()=>l(1),d=()=>l(-1),u=r(V.noteButtonsBigger),f=r(V.noteButtonsSmaller);u.addEventListener("click",(()=>{u.blur(),c()})),f.addEventListener("click",(()=>{f.blur(),d()})),document.addEventListener("keydown",(e=>{"+"===e.key&&c(),"-"===e.key&&d()}),!0),e.on("activate",(({index:t})=>{r(V.infoPageText).textContent=`${t+1} / ${e.slides.length}`}));const m=r(V.infoPagePrev),g=r(V.infoPageNext);m.addEventListener("click",(t=>{m.blur(),e.prev({fragment:!t.shiftKey})})),g.addEventListener("click",(t=>{g.blur(),e.next({fragment:!t.shiftKey})})),e.on("fragment",(({index:t,fragments:n,fragmentIndex:r})=>{m.disabled=0===t&&0===r,g.disabled=t===e.slides.length-1&&r===n.length-1}));let p=new Date;const v=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-p.getTime(),o=t(n/1e3%60),i=t(n/1e3/60%60),a=t(n/36e5%24);r(V.infoTime).textContent=e.toLocaleTimeString(),r(V.infoTimer).textContent=`${a}:${i}:${o}`};v(),setInterval(v,250),r(V.infoTimer).addEventListener("click",(()=>{p=new Date}))})(e)},X=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:H},presenterUrl:{enumerable:!0,get:R}}),g&&document.addEventListener("keydown",(t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())}))};function H(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,F+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function R(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),d(e)}const W=e=>{const t=u();return t===a&&e.appendChild(document.createElement("span")),{"":X,[i]:U,[a]:O}[t]},J=e=>{e.on("activate",(t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach((n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"}))}))},Y=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},z=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?Y(f("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:i,slides:a}=e,s=o(0,r(t,a.length-1)),l=o(0,r(n||0,i[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((()=>{var t,r;if(location.hash){const[o]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(o))return(null!==(t=Y(o))&&void 0!==t?t:1)-1;const i=document.getElementById(o)||document.querySelector(`a[name="${CSS.escape(o)}"]`);if(i){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(i)){const t=null===(r=e.fragments)||void 0===r?void 0:r[o],a=i.closest("[data-marpit-fragment]");if(t&&a){const e=t.indexOf(a);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",(({index:e,fragmentIndex:r})=>{n||m({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})})),setTimeout((()=>{o(),window.addEventListener("hashchange",(()=>r((()=>{o({fragment:!1}),m({f:void 0})})))),window.addEventListener("popstate",(()=>{n||r((()=>o()))})),n=!1}),0)}},G=(e={})=>{var t;const n=e.key||(null===(t=window.history.state)||void 0===t?void 0:t.marpBespokeSyncKey)||Math.random().toString(36).slice(2),r=`bespoke-marp-sync-${n}`;var i;i={marpBespokeSyncKey:n},m({},{setter:(e,...t)=>o({...e,...i},...t)});const a=()=>{const e=p(r);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=a(),n={...t,...e(t)};return v(r,JSON.stringify(n)),n},l=()=>{window.removeEventListener("pageshow",l),s((e=>({reference:(e.reference||0)+1})))};return e=>{l(),Object.defineProperty(e,"syncKey",{value:n,enumerable:!0});let t=!0;setTimeout((()=>{e.on("fragment",(e=>{t&&s((()=>({index:e.index,fragmentIndex:e.fragmentIndex})))}))}),0),window.addEventListener("storage",(n=>{if(n.key===r&&n.oldValue&&n.newValue){const r=JSON.parse(n.oldValue),o=JSON.parse(n.newValue);if(r.index!==o.index||r.fragmentIndex!==o.fragmentIndex)try{t=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{t=!0}}}));const o=()=>{const{reference:e}=a();void 0===e||e<=1?h(r):s((()=>({reference:e-1})))};window.addEventListener("pagehide",(e=>{e.persisted&&window.addEventListener("pageshow",l),o()})),e.on("destroy",o)}},{PI:Q,abs:Z,sqrt:ee,atan2:te}=Math,ne={passive:!0},re=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,i=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",(({touches:e})=>{r=1===e.length?i(e[0]):void 0}),ne),o.addEventListener("touchmove",(e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=i(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=ee(Z(n)**2+Z(o)**2),r.radian=te(n,o)}else r=void 0})),o.addEventListener("touchend",(o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+Q)%(2*Q)-Q;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}}),ne)},oe=new Map;oe.clear(),oe.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const ie={both:"",outgoing:"outgoing-",incoming:"incoming-"},ae={forward:"",backward:"-backward"},se=e=>`--marp-bespoke-transition-animation-${e}`,le=e=>`--marp-transition-${e}`,ce=se("name"),de=se("duration"),ue=e=>new Promise((t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",(()=>o(n))),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const i=getComputedStyle(r).getPropertyValue(le("duration"));i&&(n.defaultDuration=i),((e,t)=>{requestAnimationFrame((()=>{e.style.animationPlayState="running",requestAnimationFrame((()=>t(void 0)))}))})(r,o)})),fe=async e=>oe.has(e)?oe.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(ie))for(const[i,a]of Object.entries(ae)){const s=`marp-${o}transition${a}-${e}`;n.push(ue(s).then((e=>{t[i]=t[i]||{},t[i][r]=e?{...e,name:s}:void 0})))}return Promise.all(n).then((()=>t))})(e).then((t=>(oe.set(e,t),t))),me=e=>Object.values(e).flatMap(Object.values).every((e=>!e)),ge=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[ce]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[se("direction")]="reverse"),e}})();return!o&&n?ge(e,{type:t,backward:!1}):o||{[ce]:"__bespoke_marp_transition_no_animation__"}},pe=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch(e){}},ve="_tSId",he="_tA",ye="bespoke-marp-transition-warming-up",be=window.matchMedia("(prefers-reduced-motion: reduce)"),we="__bespoke_marp_transition_reduced_outgoing__",xe="__bespoke_marp_transition_reduced_incoming__",ke={forward:{both:void 0,incoming:{name:xe},outgoing:{name:we}},backward:{both:void 0,incoming:{name:xe},outgoing:{name:we}}},$e=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{const t=[...new Set(e).values()];return Promise.all(t.map((e=>fe(e)))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap((e=>[e.dataset.transition,e.dataset.transitionBack].flatMap((e=>{const t=pe(e);return[null==t?void 0:t.name,(null==t?void 0:t.builtinFallback)?`__builtin__${t.name}`:void 0]})).filter((e=>!!e))))).then((()=>{document.querySelectorAll("style").forEach((e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,(e=>e.slice(0,-1)+"!important"+e.slice(-1)))}))}));const r=(n,{back:r,cond:o})=>i=>{var a;const s=t();if(s)return!!i[he]||!("object"!=typeof s||(s.skipTransition(),!i.forSync));if(!o(i))return!0;const l=e.slides[e.slide()],c=()=>{var e;return null!==(e=i.back)&&void 0!==e?e:r},d="data-transition"+(c()?"-back":""),u=l.querySelector(`section[${d}]`);if(!u)return!0;const f=pe(null!==(a=u.getAttribute(d))&&void 0!==a?a:void 0);return!f||((async(e,{builtinFallback:t=!0}={})=>{let n=await fe(e);if(me(n)){if(!t)return;return n=await fe(`__builtin__${e}`),me(n)?void 0:n}return n})(f.name,{builtinFallback:f.builtinFallback}).then((e=>{if(!e){t(!0);try{n(i)}finally{t(!1)}return}let r=e;be.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=ke);const o=document.getElementById(ve);o&&o.remove();const a=document.createElement("style");a.id=ve,document.head.appendChild(a),((e,t)=>{const n=[`:root{${le("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{var n,o,i;const a=(null===(n=e[t].both)||void 0===n?void 0:n.defaultDuration)||(null===(o=e[t].outgoing)||void 0===o?void 0:o.defaultDuration)||(null===(i=e[t].incoming)||void 0===i?void 0:i.defaultDuration);return"forward"===t?a:a||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${de}:${o};}`);const i=e=>Object.entries(e).map((([e,t])=>`${e}:${t};`)).join("");return n.push(`::view-transition-old(root){${i(ge(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${i(ge(e,{...t,type:"incoming"}))}}`),n})(r,{backward:c(),duration:f.duration}).forEach((e=>{var t;return null===(t=a.sheet)||void 0===t?void 0:t.insertRule(e)}));const s=document.documentElement.classList;s.add(ye);let l=!1;const d=()=>{l||(n(i),l=!0,s.remove(ye))},u=()=>{t(!1),a.remove(),s.remove(ye)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(u)}catch(e){console.error(e),d(),u()}})),!1)};e.on("prev",r((t=>e.prev({...t,[he]:!0})),{back:!0,cond:e=>{var t;return e.index>0&&!((null===(t=e.fragment)||void 0===t||t)&&n.fragmentIndex>0)}})),e.on("next",r((t=>e.next({...t,[he]:!0})),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout((()=>{e.on("slide",r((t=>e.slide(t.index,{...t,[he]:!0})),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))}),0),e.on("fragment",(e=>{n=e}))};let Ee;const Le=()=>(void 0===Ee&&(Ee="wakeLock"in navigator&&navigator.wakeLock),Ee),Se=async()=>{const e=Le();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Pe=async()=>{if(!Le())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&Se()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await Se(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=f("view");r.dataset.bespokeView=e===a||e===i?e:""})();const t=(e=>{const t=f(e);return m({[e]:void 0}),t})("sync")||void 0;n.from(e,((...e)=>{const t=s.findIndex((e=>u()===e));return e.map((([e,n])=>e[t]&&n)).filter((e=>e))})([[1,1,0],G({key:t})],[[1,1,1],W(e)],[[1,1,0],_],[[1,1,1],b],[[1,0,0],S()],[[1,1,1],T],[[1,1,1],z({history:!1})],[[1,1,0],I()],[[1,1,0],E],[[1,0,0],J],[[1,1,0],re()],[[1,0,0],M()],[[1,0,0],$e],[[1,1,1],w],[[1,1,0],Pe]))})()}();</script></body></html>
